@@ -9,8 +9,14 @@ input {
   border: 1px solid #000;
   box-shadow: 1px 1px 1px #000;
 }
+button {
+  box-shadow: 2px 2px 4px #000;
+  margin-bottom: 10px;
+}
 
-
+samp {
+  font-weight: bold;
+}
 .wizards {
   display: flex;
   flex-wrap: wrap; 
@@ -31,13 +37,5 @@ input {
   position: relative;
   box-shadow: 2px 2px 4px #000;
   padding: 3px;
-  text-align: center;
-  
-}
-samp {
-  font-weight: bold;
-}
-button {
-  box-shadow: 2px 2px 4px #000;
-  margin-bottom: 10px;
+  text-align: center; 
 }
