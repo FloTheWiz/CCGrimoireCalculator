@@ -3,14 +3,17 @@
 <html lang="en">
 <head>
         <title>Grimoire Calculator</title>
+        <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="wizards">
   Level of your wizard towers: 
-  <input id = "level" type="number" min="1" value="1" onchange="calculateStuff()"></input><br>
+  <input id = "level" type="number" min="1" value="1" onchange="calculateStuff()"></input>
   Number of wizard towers: 
-  <input id = "count" type="number" min="1" value="1" onchange="calculateStuff()"></input><br>
+  <input id = "count" type="number" min="1" value="1" onchange="calculateStuff()"></input>
+</div>
   <div id = "manainfo">With those numbers, your maximum mana would be 5, and the lowest maximum mana you could reach would be 5</div>
+<div class="options">
   Maximum mana:
   <input id = "maxmana" type="number" min="5" value = "5" onchange="calculateStuff()"></input><br>
   <input type="checkbox" id = "SI" onchange="calculateStuff()">
@@ -19,7 +22,6 @@
   <label for="RB">Reality bending</label><br>
   <input type="checkbox" id = "gudRegen" onchange="calculateStuff()">
   <label for="gudRegen">Assume maximum mana for regen purposes is always max(100, current mana + 1)   Don't check if you don't know what this means</label><br>
-  <br>
   <input type="checkbox" id = "calcOptimal" onchange="calculateStuff()">
   <label for="calcOptimal">Calculate optimal max magic (up to the set max magic)</label><br>
 
@@ -35,6 +37,8 @@
   How many times do you want to cast the spell(assumes sell strats):
   <input id = "multi" type="number" min="1" value = "1" onchange="calculateStuff()"></input>
   </p>
+</div>
+<div class="spells">
   <p id = "spell1"></p>
   <p id = "spell2"></p>
   <p id = "spell3"></p>
@@ -44,7 +48,8 @@
   <p id = "spell7"></p>
   <p id = "spell8"></p>
   <p id = "spell9"></p>
-  <input type="text" id="arbitraryCast">
+</div>
+<input type="text" id="arbitraryCast">
   <label for="arbitraryCast">Input arbitrary multicast:<br>casts separated by space, supports acronyms (eg. fthof di scp), gfd casts (start the cast with "g!"), specified cost functions (eg. 25%+12), and bundling without selling with - (eg. fthof-g!fthof) (note that this uses the level and SI/RB fields from above)</label><br>
   <input type="value" id="ACmagicLeft" min="0" value="0">
   <label for="ACmagicLeft">Magic left after multicast</label><br>
